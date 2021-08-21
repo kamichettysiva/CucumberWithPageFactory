@@ -1,0 +1,8 @@
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/FrameworkJava/src/test/java/tests/testCase_PF.java">
+        <classes>
+            <class name="tests.testCase_PF">
+            </class>
+        </classes>
+    </test>
+</suite>
