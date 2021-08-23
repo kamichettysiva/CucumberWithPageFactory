@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,14 +12,18 @@ public class amazonSearchStepDefinitions {
 
     WebDriver driver = null;
     amazonHomePage_PF amazonhmepage_pf = null;
-
-    @Given("amazon webpage is launched")
-    public void amazon_webpage_is_launched() {
+    @Before
+    public void setUp(){
         String ProjDir = System.getProperty("user.dir");
         System.out.println(ProjDir);
         System.setProperty("webdriver.chrome.driver", ProjDir+"/src/test/resources/drivers/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.amazon.in/");
+    };
+
+
+    @Given("amazon webpage is launched")
+    public void amazon_webpage_is_launched() {
         amazonhmepage_pf = new amazonHomePage_PF(driver);
     }
 

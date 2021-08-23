@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/features",
         glue={"stepdefinitions"},
         monochrome = true,
-        tags = "@SanityFlow",
+        tags="@SanityFlow or @RegressionFlow",
         plugin={"pretty", "html:target/cucumber-html-report.html", "json:target/cucumber.json", "junit:target/cucumber.xml", "rerun:target/rerun.txt"})
-public class runner {
+public class TestRunner {
 
 }

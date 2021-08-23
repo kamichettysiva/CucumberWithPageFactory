@@ -9,6 +9,7 @@ Feature: Validate Search Functionality in Amazon site
   Examples:
   |product name|
   |TV          |
+  |Macbook     |
 
   @RegressionFlow
   Scenario Outline: Search product functionality 2
@@ -18,5 +19,5 @@ Feature: Validate Search Functionality in Amazon site
     Then search results should be displayed
     Examples:
       |product name|
-      |Macbook     |
+      |grooming    |
 
